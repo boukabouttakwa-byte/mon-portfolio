@@ -1,0 +1,82 @@
+
+:root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#6ee7b7;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      --maxw:920px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    span{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{margin:0; min-height:100vh; background:linear-gradient(180deg,#071023 0%, #071a2a 100%); 
+        color:#e6eef6; display:flex; align-items:center; justify-content:center; padding:28px}
+    .wrap{width:100%; max-width:var(--maxw)}
+
+    header{display:flex; gap:18px; align-items:center; margin-bottom:22px}
+    .avatar{width:92px; height:92px; border-radius:18px; background:linear-gradient(135deg,var(--accent),#60a5fa); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:32px; color:#022; box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .head-txt h1{margin:0; font-size:20px}
+    .head-txt p{margin:4px 0 0; color:var(--muted); font-size:14px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:22px; box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+
+    .grid{display:grid; grid-template-columns:1fr 320px; gap:18px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}}
+
+    .section{margin-bottom:16px}
+    h2{font-size:16px; margin:0 0 10px}
+    p.lead{color:var(--muted); line-height:1.45}
+
+    .btn-row{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{padding:10px 14px; border-radius:12px; background:var(--glass); border:1px solid rgba(255,255,255,0.04); cursor:pointer; font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#60a5fa); color:#022}
+    .links a{display:inline-block; margin-right:8px; color:var(--accent); text-decoration:none; font-weight:600}
+
+    .right{position:relative}
+    .contact-card{background:rgba(255,255,255,0.02); padding:16px; border-radius:12px}
+    .contact-card p{margin:8px 0; color:var(--muted)}
+
+    .cv-download{display:block; margin-top:8px; padding:10px; border-radius:10px; text-align:center; text-decoration:none; font-weight:700; background:rgba(255,255,255,0.03)}
+    footer{margin-top:12px; color:var(--muted); font-size:13px}
+    ul.skills{display:flex; gap:8px; flex-wrap:wrap; padding:0; list-style:none; margin:8px 0}
+    ul.skills li{background:rgba(255,255,255,0.03); padding:6px 10px; border-radius:999px; font-size:13px}
+    li{
+        width: max-content;
+        font-size: 72px;
+        position: relative;
+        cursor: pointer;
+        margin: 10px auto;
+    }
+    li::after{
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        background-color: #5593da;
+        transition: 0.3s;
+        transition-timing-function: ease-in-out;
+        transform: scaleX(0);
+    }
+    li:hover::after{
+        transform: scaleX(1);
+    }
+    aside::after{
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        background-color: #465fcc;
+        transition: 0.3s;
+        transition-timing-function: ease-in-out;
+        transform: scaleX(0);
+    }
+    aside:hover::after{
+        transform: scaleX(1);
+    }
